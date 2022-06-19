@@ -1,108 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-/*The following properties will be apllied for every content in the entire document*/
 *{                                          
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-/*Heading properties*/
 h1{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     text-decoration: underline;
   }
 
-/*All the content inside the body will have the following properties*/
 body{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
     background: linear-gradient(360deg,#800080, #ffc0cb);
-  }
-
-/*The class 'calculator' is the calculator layout*/
-#calculator{
+}
+.container {
     width: 380px;
     height: 550px;
-    background-color: ghostwhite;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background: whitesmoke;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    margin: 40px auto;
 }
 
-/*Result part of the calculator*/
-#result{
-  height: 150px;
+#display {
+    text-align: right;
+    height: 80px;
+    line-height: 70px;
+    margin-right: 30px;
+    padding: 16px 8px;
+    font-size: 30px;
 }
 
-/*History of the calculations will be displayed*/
-#history{
-	text-align: right;
-	height: 20px;
-	margin: 0 20px;
-  position: relative;
-	padding-top: 20px;
-	font-size: 15px;
-	color: #919191;
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    color: #d6dbdd;
 }
 
-/*The result container having text*/
-#output{
-	text-align: right;
-	height: 60px;
-	margin: 10px 20px;
-	font-size: 30px;
+.button {
+    border: none;
+    border-radius: 50%;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
 }
 
-/*The keys layout*/
-#keyboard{
-  height: 400px;
-  margin-left: 25px;
+#equal {
+    background-color: #9477af;
 }
 
-.operator, .number, .empty{
-	width: 50px;
-	height: 50px;
-	margin: 15px;
-	float: left;
-	border-radius: 50%;
-	border-width: 0;
-	font-weight: bold;
-	font-size: 15px;
-}
-.number{
-	background-color: #eaedef;
+.button:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
 }
 
-.empty{
-  background-color: ghostwhite;
-}
-.number, .operator{
-	cursor: pointer;
-}
-.operator:active, .number:active, .empty:active{ /*When the numbers or operators are tapped, the default font size changes from 15 to 13*/
-	font-size: 13px;
-}
-.operator:focus, .number:focus, .empty:focus{
-	outline: 0;
-}
-button:nth-child(4){
-	font-size: 20px;
+#operator1{
 	background-color: #20b2aa;
+    font-size: 20px;
 }
-button:nth-child(8){
-	font-size: 20px;
-	background-color: #ffa500;
-}
-button:nth-child(12){
-	font-size: 20px;
-	background-color: #f08080;
-}
-button:nth-child(16){
-	font-size: 20px;
+
+#operator2{
 	background-color: #7d93e0;
+    font-size: 20px;
 }
-button:nth-child(20){
-	font-size: 20px;
-	background-color: #9477af;
+
+#operator3{
+    background-color: #ffa500;
+    font-size: 20px;
+}
+
+#operator4{
+    background-color: #f08080;
+    font-size: 20px;
 }
